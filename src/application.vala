@@ -30,15 +30,28 @@ public class MyApp : Gtk.Application {
     protected override void activate () {
         var grid = new Gtk.Grid ();
         grid.orientation = Gtk.Orientation.VERTICAL;
+        grid.row_spacing = 6;
+
         var main_button = new Gtk.Button.with_label(_("Click me!"));
         var label = new Gtk.Label(_("Hello, boss!"));
+        var counter = 0;    
+
         main_button.margin = 12;
-        var counter = 0;
         main_button.clicked.connect (() => {
             counter++;
             main_button.label = _("Clicked").concat(" ", counter.to_string(), _(" times"));
             main_button.sensitive = true;
         });
+
+        var second_button = new Gtk.Button.with_label(_("Second Button"));
+        var label2 = new Gtk.Label(null);
+
+        second_button.clicked.connect (() => {
+            label2.label = _("You Just Clicked ").concat(second_button.label);
+            second_button.sensitive = false;
+        });
+
+
         var main_window = new Gtk.ApplicationWindow (this);
         //main_window.default_height = 100;
         //main_window.default_width = 300;
@@ -47,6 +60,8 @@ public class MyApp : Gtk.Application {
         main_window.title = _("Hello Word");
         grid.add(label);
         grid.add(main_button);
+        grid.add(label2);
+        grid.add(second_button);
         main_window.add (grid);
         main_window.show_all ();
     }
