@@ -95,6 +95,37 @@ public class MyApp : Gtk.Application {
         layout.attach_next_to(notif_btn_1, notification_label, Gtk.PositionType.RIGHT, 1, 1);
         layout.attach_next_to(angry_btn, notif_btn_1, Gtk.PositionType.RIGHT, 1, 1);
 
+
+        var entry = Unity.LauncherEntry.get_for_desktop_id ("com.github.zakilvir.First-Vala-App.desktop");
+        entry.count_visible = true;
+        entry.count = 11;
+
+        entry.progress_visible = true;
+        entry.progress = 0.87f;
+
+        // Create a root quicklist
+        var quicklist = new Dbusmenu.Menuitem ();
+
+        // Create root's children
+        var item1 = new Dbusmenu.Menuitem ();
+        item1.property_set (Dbusmenu.MENUITEM_PROP_LABEL, "Item 1");
+        item1.item_activated.connect (() => {
+            message ("Item 1 activated");
+        });
+
+        var item2 = new Dbusmenu.Menuitem ();
+        item2.property_set (Dbusmenu.MENUITEM_PROP_LABEL, "Item 2");
+        item2.item_activated.connect (() => {
+            message ("Item 2 activated");
+        });
+
+        // Add children to the quicklist
+        quicklist.child_append (item1);
+        quicklist.child_append (item2);
+
+        // Finally, tell libunity to show the desired quicklist
+        entry.quicklist = quicklist;
+
         main_window.add (layout);
         main_window.show_all ();
     }
