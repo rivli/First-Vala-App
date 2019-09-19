@@ -28,13 +28,13 @@ public class MyApp : Gtk.Application {
     }
 
     protected override void activate () {
-        var button_hello = new Gtk.Button.with_label("Click me!");
-        var label = new Gtk.Label("Hello, boss!");
+        var button_hello = new Gtk.Button.with_label(_("Click me!"));
+        var label = new Gtk.Label(_("Hello, boss!"));
         button_hello.margin = 12;
         var counter = 0;
         button_hello.clicked.connect (() => {
             counter++;
-            button_hello.label = "Clicked".concat(" ", counter.to_string(), " times");
+            button_hello.label = _("Clicked").concat(" ", counter.to_string(), _(" times"));
             button_hello.sensitive = true;
         });
         var main_window = new Gtk.ApplicationWindow (this);
@@ -42,7 +42,7 @@ public class MyApp : Gtk.Application {
         //main_window.default_width = 300;
         // also we can do 
          main_window.set_default_size (300, 100);
-        main_window.title = "Hello Word";
+        main_window.title = _("Hello Word");
         main_window.add (button_hello);
         main_window.show_all ();
     }

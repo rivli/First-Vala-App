@@ -1,0 +1,69 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.zakilvir.First-Vala-App package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.zakilvir.First-Vala-App\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-19 22:20+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/application.vala:31
+msgid "Click me!"
+msgstr ""
+
+#: src/application.vala:32
+msgid "Hello, boss!"
+msgstr ""
+
+#: src/application.vala:37
+msgid "Clicked"
+msgstr ""
+
+#: src/application.vala:37
+msgid " times"
+msgstr ""
+
+#: src/application.vala:45
+msgid "Hello Word"
+msgstr ""
+
+#: data/com.github.zakilvir.First-Vala-App.desktop.in:3
+msgid "First Vala"
+msgstr ""
+
+#: data/com.github.zakilvir.First-Vala-App.desktop.in:4
+#: data/com.github.zakilvir.First-Vala-App.appdata.xml.in:6
+msgid "First Vala App"
+msgstr ""
+
+#: data/com.github.zakilvir.First-Vala-App.desktop.in:5
+msgid "Proves that we can use Vala and Gtk"
+msgstr ""
+
+#: data/com.github.zakilvir.First-Vala-App.desktop.in:8
+msgid "application-default-icon"
+msgstr ""
+
+#: data/com.github.zakilvir.First-Vala-App.desktop.in:10
+msgid "Hello;World;Example;"
+msgstr ""
+
+#: data/com.github.zakilvir.First-Vala-App.appdata.xml.in:7
+msgid "A Catchy Tagline"
+msgstr ""
+
+#: data/com.github.zakilvir.First-Vala-App.appdata.xml.in:9
+msgid ""
+"A quick summary of my app's main selling points and features. Just a couple "
+"sentences per paragraph is best."
+msgstr ""
