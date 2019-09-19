@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=First Vala
+GenericName=First Vala App
+Comment=Proves that we can use Vala and Gtk
+Categories=Utility;Education;
+Exec=com.github.zakilvir.First-Vala-App
+Icon=application-default-icon
+Terminal=false
+Type=Application
+Keywords=Hello;World;Example;
