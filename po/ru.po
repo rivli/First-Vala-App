@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.zakilvir.First-Vala-App\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-19 22:20+0500\n"
+"POT-Creation-Date: 2019-09-19 23:36+0500\n"
 "PO-Revision-Date: 2019-09-19 22:20+0500\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,23 +18,63 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: src/application.vala:31
+#: src/application.vala:36
 msgid "Click me!"
 msgstr ""
 
-#: src/application.vala:32
+#: src/application.vala:37
 msgid "Hello, boss!"
 msgstr ""
 
-#: src/application.vala:37
+#: src/application.vala:43
 msgid "Clicked"
 msgstr ""
 
-#: src/application.vala:37
+#: src/application.vala:43
 msgid " times"
 msgstr ""
 
-#: src/application.vala:45
+#: src/application.vala:47
+msgid "Rotate Button"
+msgstr ""
+
+#: src/application.vala:49
+msgid "Horizontal"
+msgstr ""
+
+#: src/application.vala:52
+msgid "You Just Clicked "
+msgstr ""
+
+#: src/application.vala:54
+msgid "Vertical"
+msgstr ""
+
+#: src/application.vala:58
+msgid "Notifications"
+msgstr ""
+
+#: src/application.vala:62
+msgid "Hello, World!"
+msgstr ""
+
+#: src/application.vala:63
+msgid "This is my first notification!"
+msgstr ""
+
+#: src/application.vala:67
+msgid "Angry Button"
+msgstr ""
+
+#: src/application.vala:69
+msgid "Warning!"
+msgstr ""
+
+#: src/application.vala:72
+msgid "This is my first warning notification!"
+msgstr ""
+
+#: src/application.vala:82
 msgid "Hello Word"
 msgstr ""
 
@@ -55,7 +95,7 @@ msgstr ""
 msgid "application-default-icon"
 msgstr ""
 
-#: data/com.github.zakilvir.First-Vala-App.desktop.in:10
+#: data/com.github.zakilvir.First-Vala-App.desktop.in:11
 msgid "Hello;World;Example;"
 msgstr ""
 

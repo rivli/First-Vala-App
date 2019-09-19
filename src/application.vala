@@ -55,6 +55,24 @@ public class MyApp : Gtk.Application {
             second_button.sensitive = false;
         });
 
+        var notification_label = new Gtk.Label(_("Notifications"));
+        var notif_btn_1 = new Gtk.Button.with_label("Frist Notification");
+
+        notif_btn_1.clicked.connect (() => {
+            var first_not = new Notification (_("Hello, World!"));
+            first_not.set_body (_("This is my first notification!"));
+            this.send_notification ("com.github.zakilvir.First-Vala-App", first_not);
+        });
+
+        var angry_btn = new Gtk.Button.with_label(_("Angry Button"));
+        angry_btn.clicked.connect (() => {
+            var second_not = new Notification(_("Warning!"));
+            var icon = new GLib.ThemedIcon ("dialog-warning");
+            second_not.set_icon (icon);
+            second_not.set_body (_("This is my first warning notification!"));
+            this.send_notification ("com.github.zakilvir.First-Vala-App", second_not);
+        });
+
 
         var main_window = new Gtk.ApplicationWindow (this);
         //main_window.default_height = 100;
@@ -62,6 +80,7 @@ public class MyApp : Gtk.Application {
         // also we can do 
         main_window.set_default_size (300, 100);
         main_window.title = _("Hello Word");
+        main_window.margin = 6;
 
         // add first row of widgets
         layout.attach(label, 0, 0, 1, 1);
@@ -71,6 +90,10 @@ public class MyApp : Gtk.Application {
         layout.attach_next_to(second_button, label2, Gtk.PositionType.RIGHT, 1, 1);
 
         layout.attach(label3, 3, 0, 2, 2);
+
+        layout.attach(notification_label, 0, 2, 1, 1);
+        layout.attach_next_to(notif_btn_1, notification_label, Gtk.PositionType.RIGHT, 1, 1);
+        layout.attach_next_to(angry_btn, notif_btn_1, Gtk.PositionType.RIGHT, 1, 1);
 
         main_window.add (layout);
         main_window.show_all ();
