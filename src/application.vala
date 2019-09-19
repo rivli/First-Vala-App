@@ -28,9 +28,10 @@ public class MyApp : Gtk.Application {
     }
 
     protected override void activate () {
-        var grid = new Gtk.Grid ();
-        grid.orientation = Gtk.Orientation.VERTICAL;
-        grid.row_spacing = 6;
+        var layout = new Gtk.Grid ();
+        layout.orientation = Gtk.Orientation.VERTICAL;
+        layout.column_spacing = 6;
+        layout.row_spacing = 6;
 
         var main_button = new Gtk.Button.with_label(_("Click me!"));
         var label = new Gtk.Label(_("Hello, boss!"));
@@ -43,11 +44,14 @@ public class MyApp : Gtk.Application {
             main_button.sensitive = true;
         });
 
-        var second_button = new Gtk.Button.with_label(_("Second Button"));
+        var second_button = new Gtk.Button.with_label(_("Rotate Button"));
         var label2 = new Gtk.Label(null);
+        var label3 = new Gtk.Label(_("Horizontal"));
 
         second_button.clicked.connect (() => {
             label2.label = _("You Just Clicked ").concat(second_button.label);
+            label3.angle = 90;
+            label3.label = _("Vertical");
             second_button.sensitive = false;
         });
 
@@ -58,11 +62,17 @@ public class MyApp : Gtk.Application {
         // also we can do 
         main_window.set_default_size (300, 100);
         main_window.title = _("Hello Word");
-        grid.add(label);
-        grid.add(main_button);
-        grid.add(label2);
-        grid.add(second_button);
-        main_window.add (grid);
+
+        // add first row of widgets
+        layout.attach(label, 0, 0, 1, 1);
+        layout.attach_next_to(main_button, label, Gtk.PositionType.RIGHT, 1, 1);
+
+        layout.attach(label2, 0, 1, 1, 1);
+        layout.attach_next_to(second_button, label2, Gtk.PositionType.RIGHT, 1, 1);
+
+        layout.attach(label3, 3, 0, 2, 2);
+
+        main_window.add (layout);
         main_window.show_all ();
     }
 
